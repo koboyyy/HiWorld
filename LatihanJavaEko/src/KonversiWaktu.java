@@ -1,37 +1,27 @@
 import java.util.Scanner;
 
-public class KonfersiWaktu {
+public class KonversiWaktu {
     public static void main(String[] args) {
-
-        double detik1, detik2, detik3, detik4;
-        double konfersiJam = 3600;
-        double konfersiMenit = 60;
-
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Masukkan detik pertama: ");
-        detik1 = scanner.nextInt();
+        int[] detikArray = new int[4];
 
-        System.out.print("Masukkan detik kedua: ");
-        detik2 = scanner.nextInt();
+        for (int i = 0; i < detikArray.length; i++) {
+            System.out.print("Masukkan detik ke-" + (i + 1) + ": ");
+            detikArray[i] = scanner.nextInt();
+        }
 
-        System.out.print("Masukkan detik ketiga: ");
-        detik3 = scanner.nextInt();
+        System.out.println("\nNo\tDetik\t\tJam\tMenit");
 
-        System.out.print("Masukkan detik keempat: ");
-        detik4 = scanner.nextInt();
+        for (int i = 0; i < detikArray.length; i++) {
+            int detik = detikArray[i];
 
+            int jam = detik / 3600;
+            int menit = detik / 60;
 
-        System.out.println(detik1 / konfersiJam);
-        System.out.println(detik2 / konfersiJam);
-        System.out.println(detik3 / konfersiJam);
-        System.out.println(detik4 / konfersiJam);
+            System.out.printf("%d\t%d detik\t%d\t%d\n", i + 1, detik, jam, menit);
+        }
 
-        System.out.println(detik1 / konfersiMenit);
-        System.out.println(detik2 / konfersiMenit);
-        System.out.println(detik3 / konfersiMenit);
-        System.out.println(detik4 / konfersiMenit);
-
+        scanner.close();
     }
-
 }
