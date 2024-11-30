@@ -5,12 +5,11 @@ public class VolumeTabung {
         
         double jariJari = 6;
         double tinggi = 10;
-        double hasil = (PHI*(jariJari*jariJari)*tinggi);
+        double volume =PHI*(jariJari*jariJari)*tinggi;
 
         System.out.println("Jari jari = " + jariJari + "Cm.");
         System.out.println("Tinggi = " + tinggi + "Cm.");
-        System.out.println("Luas volume tabung = " + hasil + "Cm.");
-
+        System.out.println("volume tabung = " + volume + "Cm.");
 
     }
 }
